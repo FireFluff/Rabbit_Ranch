@@ -4,6 +4,7 @@ using TMPro;
 
 public class WindowControl : MonoBehaviour
 {
+#if !UNITY_EDITOR
     // Non serialized fields
     private Vector2 _windowOriginPos;
     private int _gameHeight;
@@ -31,4 +32,5 @@ public class WindowControl : MonoBehaviour
     {
         
     }
+#endif
 }

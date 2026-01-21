@@ -165,6 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   carrotPrefab: {fileID: 7558070181416230958, guid: 05a841ba7015e174f83ac2b730cf43ea, type: 3}
+  spawnCarrotAction: {fileID: 1472376605}
+  backgroundSprite: {fileID: 0}
 --- !u!114 &488221755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,6 +752,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472376605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Attack
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
 --- !u!1 &1537355954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,8 +1230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102cd0684a0d59c428f1c51ad27cc58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  gameScreenCoverPerc: 25
-  debugText: {fileID: 0}
 --- !u!4 &2005250993
 Transform:
   m_ObjectHideFlags: 0

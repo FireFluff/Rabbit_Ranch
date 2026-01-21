@@ -133,8 +133,9 @@ public class AlwaysOnTop : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        AssignTopmostWindow(CONSTANT_WINDOW_TITLE_FROM_GAME, true);
+        // AssignTopmostWindow(CONSTANT_WINDOW_TITLE_FROM_GAME, true);
 #if !UNITY_EDITOR
+    AssignTopmostWindow(CONSTANT_WINDOW_TITLE_FROM_GAME, true);
         IntPtr hwnd = GetActiveWindow();
         // Make window layered but not input-transparent
         SetWindowLong(hwnd, GWL_EXSTYLE, GetWindowLong(hwnd, GWL_EXSTYLE) | WS_EX_LAYERED);
