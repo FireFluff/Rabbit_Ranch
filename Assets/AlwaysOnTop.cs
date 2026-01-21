@@ -13,7 +13,7 @@ public class AlwaysOnTop : MonoBehaviour
 {
     #region WIN32API
 
-    const string CONSTANT_WINDOW_TITLE_FROM_GAME = "DesktopTest"; // Change this to your game's window title
+    const string CONSTANT_WINDOW_TITLE_FROM_GAME = "Rabbit Ranch"; // Change this to your game's window title
     public static readonly System.IntPtr HWND_TOPMOST = new System.IntPtr(-1);
     public static readonly System.IntPtr HWND_NOT_TOPMOST = new System.IntPtr(-2);
     const System.UInt32 SWP_SHOWWINDOW = 0x0040;
