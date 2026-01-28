@@ -41,7 +41,7 @@ public class BorderlessWindow
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void InitializeOnLoad()
     {
-#if !UNITY_EDITOR && UNITY_STANDALONE_WIN   // Dont do this while on Unity Editor!
+#if !UNITY_EDITOR && UNITY_STANDALONE_WIN   // Don't do this while on Unity Editor!
         SetFramelessWindow();
 #endif
     }

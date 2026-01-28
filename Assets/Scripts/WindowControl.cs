@@ -4,15 +4,16 @@ using TMPro;
 
 public class WindowControl : MonoBehaviour
 {
-#if !UNITY_EDITOR
+
     // Non serialized fields
     private Vector2 _windowOriginPos;
     private int _gameHeight;
     
     // Serialized fields
     [Range(1,100), SerializeField] private int gameScreenCoverPerc = 20;
-    [SerializeField] private TMP_Text debugText;
-    
+    //[SerializeField] private TMP_Text debugText;
+
+#if !UNITY_EDITOR 
     void Awake()
     {
         // Get the screen dimensions of the primary screen without taskbar.

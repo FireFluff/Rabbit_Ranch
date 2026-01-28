@@ -5,28 +5,28 @@ using UnityEngine.Pool;
 
 public class CarrotSpawner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Serialized fields - Public -> Private
     [SerializeField] private GameObject carrotPrefab;
-    private ObjectPool<GameObject> carrotPool;
-    
     [SerializeField] private InputActionReference spawnCarrotAction;
     
-    private float _backgroundWidth;
+    // NonSerialized - Public -> Private
+    private ObjectPool<GameObject> _carrotPool;
+    private float _gameWidth;
 
 
     private void Awake()
     {
-        carrotPool = new ObjectPool<GameObject>(
-            createFunc: () => Instantiate(carrotPrefab),
+        _carrotPool = new ObjectPool<GameObject>(
+            createFunc: () => Instantiate(carrotPrefab, transform, true),
             actionOnGet: (carrot) => carrot.SetActive(true),
             actionOnRelease: (carrot) => carrot.SetActive(false),
             actionOnDestroy: (carrot) => Destroy(carrot),
             collectionCheck: false,
-            defaultCapacity: 10,
+            defaultCapacity: 5,
             maxSize: 50
         );
         
-        // TODO: get screen size on awake, calculate center and edges -> enter random float for x in range for carrot spawn range
+        _gameWidth = Screen.width;
     }
     
     
@@ -40,20 +40,17 @@ public class CarrotSpawner : MonoBehaviour
     {
         spawnCarrotAction.action.performed -= SpawnCarrot;
     }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
     
     public void SpawnCarrot()
     {
-        GameObject carrot = carrotPool.Get();
+        var carrot = _carrotPool.Get();
+        float randomX = UnityEngine.Random.Range(0f, _gameWidth);
+        Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(randomX, Screen.height, 10f));
+        carrot.transform.position = spawnPosition;
     }
 
-    public void SpawnCarrot(InputAction.CallbackContext context)
+    private void SpawnCarrot(InputAction.CallbackContext context)
     {
-        GameObject carrot = carrotPool.Get();
+        SpawnCarrot();
     }
 }
