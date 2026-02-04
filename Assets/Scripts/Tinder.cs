@@ -14,6 +14,7 @@ public class Tinder : MonoBehaviour
 
     private void Start()
     {
+		// Subscribe to the events
         OnAddCarrotToQueue += AddToCarrotQueue;
         OnAddRabbitToQueue += AddToRabbitQueue;
     }

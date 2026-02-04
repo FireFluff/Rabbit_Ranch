@@ -9,6 +9,8 @@ public class KeyHook : MonoBehaviour
     private static IntPtr _hookID = IntPtr.Zero;
     private static LowLevelKeyboardProc _proc = HookCallback;
 
+    private int _counter = 32;
+
     //public PlayerController player;
     //public PopUp popup;
     
@@ -53,7 +55,15 @@ public class KeyHook : MonoBehaviour
 
     void RequestJumpFromHook()
     {
-        if (carrotSpawner) carrotSpawner.SpawnCarrot();
+        if (carrotSpawner && _counter == 0)
+        {
+            carrotSpawner.SpawnCarrot();
+            _counter = 32;
+        }
+        else
+        {
+            _counter -= 1;
+        }
         
         
         //if (player) player.RequestJump();

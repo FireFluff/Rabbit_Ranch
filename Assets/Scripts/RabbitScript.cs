@@ -17,5 +17,6 @@ public class RabbitScript : MonoBehaviour
     public void EatCarrot(GameObject carrot)
     {
         // TODO: Add eating carrot logic here
+        
     }
 }
