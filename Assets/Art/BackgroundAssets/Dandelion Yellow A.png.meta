@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3f3f532c477035347bf42408fa4af084
+guid: 0194ec811b6ed62489fd01c780fc2631
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5549621904989754632
-    second: Carrot01_0
+      213: 7325989596044472876
+    second: Dandelion Yellow A_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Carrot01_0
+      name: Dandelion Yellow A_0
       rect:
         serializedVersion: 2
-        x: 334
-        y: 258
-        width: 355
-        height: 508
+        x: 0
+        y: 0
+        width: 38
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8faeb53d748cbf2b0800000000000000
-      internalID: -5549621904989754632
+      spriteID: c22307c09b42ba560800000000000000
+      internalID: 7325989596044472876
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Carrot01_0: -5549621904989754632
+      Dandelion Yellow A_0: 7325989596044472876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

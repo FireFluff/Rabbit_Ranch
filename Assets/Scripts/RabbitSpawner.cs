@@ -26,10 +26,12 @@ public class RabbitSpawner : MonoBehaviour
         _gameWidth = Screen.width;
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        var rabbit = _rabbitPool.Get();
+        float randomX = UnityEngine.Random.Range(0f, _gameWidth);
+        Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(randomX, 0f, 10f));
+        rabbit.transform.position = spawnPosition;
     }
     
     private static void OnGet(GameObject gameObject)

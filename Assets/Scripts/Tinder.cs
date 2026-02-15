@@ -24,7 +24,7 @@ public class Tinder : MonoBehaviour
         Debug.Log("Adding carrot to queue");
         _carrotQueue.Enqueue(carrot);
         var rabbitScript = LookForMatch("Rabbit")?.GetComponent<RabbitScript>();
-        Match(rabbitScript, carrot);
+        if (rabbitScript is not null) Match(rabbitScript, carrot);
     }
     
     private void AddToRabbitQueue(GameObject rabbit)
